@@ -12,3 +12,6 @@ ru:
   label_active_body_job_offers: "На данный момент я в поиске работы, поэтому буду рад ознакомиться с вашим предложением."
   label_download_cv: "Скачать CV"
   label_current_time: "Текущее время"
+  label_header_skills: "Навыки, которыми я владею."
+  label_roadmap: "Дорожная карта Backend-разработчика"
+  label_body_skills: ""

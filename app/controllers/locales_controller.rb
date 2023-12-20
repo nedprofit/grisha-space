@@ -7,12 +7,4 @@ class LocalesController < ApplicationController
       format.html { redirect_to root_path }
     end
   end
-
-  def switch_theme
-    session[:theme] = params[:theme]
-
-    respond_to do |format|
-      format.html { redirect_to root_path }
-    end
-  end
 end

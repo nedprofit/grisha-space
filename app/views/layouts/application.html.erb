@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="dark">
+<html data-theme="light">
 <head>
   <title>grisha.space</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,6 +10,20 @@
 </head>
 
 <body class="flex h-full bg-zinc-50 dark:bg-black">
-  <%= yield %>
+<div class="flex w-full">
+  <div class="fixed inset-0 flex justify-center sm:px-8">
+    <div class="flex w-full max-w-7xl lg:px-8">
+      <div class="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20"></div>
+    </div>
+  </div>
+  <div class="relative flex w-full flex-col">
+    <%= render partial: 'layouts/header' %>
+    <main class="flex-auto">
+      <%= yield %>
+    </main>
+
+    <%= render partial: 'layouts/footer' %>
+  </div>
+</div>
 </body>
 </html>
