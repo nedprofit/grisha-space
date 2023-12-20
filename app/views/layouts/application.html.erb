@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <title>grisha.space</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_importmap_tags %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+</head>
+
+<body class="flex h-full bg-zinc-50 dark:bg-black">
+  <%= yield %>
+</body>
+</html>
