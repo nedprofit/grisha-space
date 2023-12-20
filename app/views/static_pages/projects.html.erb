@@ -4,11 +4,10 @@
       <div class="mx-auto max-w-2xl lg:max-w-5xl">
         <header class="max-w-2xl">
           <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Проекты, над которыми я работал.
+            <%= t(:label_header_project) %>
           </h1>
           <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Я работал над огромным количеством мелких проектов на Rails для учебных целей (знакомство с новыми
-            технологиями), так и с несколькими большими для оптимизации или разработки бизнес-процессов.
+            <%= t(:label_body_project) %>
           </p></header>
         <div class="mt-16 sm:mt-20">
           <ul role="list" class="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
@@ -17,13 +16,13 @@
                 <%= image_tag "logo/redmine", class: 'h-8 w-8 flex-none' %>
               </div>
               <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                  <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                   <span class="relative z-10">Redmine</span></a>
               </h2>
-              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Корпоративная разработка с ответвлением
-                от обычной версии, с полноценной переработкой ядра,
-                перехода на Stimulus, черновиками, уведомлениями и множеством всего остального.</p>
+              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <%= t(:label_description_redmine) %>
+              </p>
             </li>
             <li class="group relative flex flex-col items-start">
               <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
@@ -34,33 +33,35 @@
                 <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                   <span class="relative z-10">Kaspi Parser</span></a>
               </h2>
-              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Автоматическое поднятие или снижение цен
-                у товаров, в зависимости от текущей позиции среди конкурентов.</p>
+              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <%= t(:label_description_kaspi) %>
+              </p>
             </li>
             <li class="group relative flex flex-col items-start">
               <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <%= image_tag "logo/webmoney", class: 'h-8 w-8 flex-none' %>
               </div>
               <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                  <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                   <span class="relative z-10">Webmoney Parser</span></a>
               </h2>
-              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Отслеживание цен на бирже Exchange и вывод их в веб-интерфейс,
-              установка лимитов и цен для покупки через WebMoney API.</p>
+              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <%= t(:label_description_webmoney) %>
+              </p>
             </li>
             <li class="group relative flex flex-col items-start">
               <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                 <%= image_tag "logo/lib", class: 'h-8 w-8 flex-none' %>
               </div>
               <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                  <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
                   <span class="relative z-10">Lib Directory</span></a>
               </h2>
-              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Пет-проект с базой всех изданных книг из ExLibris в
-                виде социальной сети как для обычных читателей, так и для авторов самоиздата.
-               </p>
+              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <%= t(:label_description_lib) %>
+              </p>
             </li>
             <li class="group relative flex flex-col items-start">
               <div class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
@@ -69,10 +70,11 @@
               <h2 class="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
                 <div class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
                 <a href="#"><span class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-                  <span class="relative z-10">Oddysey</span></a>
+                  <span class="relative z-10">Odyssey</span></a>
               </h2>
-              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Микро-сервис для Embassy Alliance по получению отелей и туров
-                из Booking и RateHawk.</p>
+              <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <%= t(:label_description_odyssey) %>
+              </p>
             </li>
           </ul>
         </div>
