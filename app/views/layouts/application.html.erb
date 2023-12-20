@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html data-theme="light">
 <head>
-  <title>grisha.space</title>
+  <title><%= "#{@current_page} | " if @current_page.present?%><%= t(:label_name_and_surname)%></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
