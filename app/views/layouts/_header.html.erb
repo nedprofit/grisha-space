@@ -48,22 +48,53 @@
                   <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
                     <li>
                       <%#= link_to articles_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
-                        <%#= t(:label_articles) %>
+                      <%#= t(:label_articles) %>
                       <%# end %>
-                    </li>
-                    <li>
-                      <%= link_to projects_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
-                        <%= t(:label_projects) %>
+                      <% if current_page?(root_path) %>
+                        <%= link_to root_path, class: "relative block px-3 py-2 transition text-teal-500 dark:text-teal-400" do %>
+                          <%= t(:label_home) %>
+                          <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>
+                        <% end %>
+                      <% else %>
+                        <%= link_to root_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
+                          <%= t(:label_home) %>
+                        <% end %>
                       <% end %>
                     </li>
                     <li>
-                      <%= link_to skills_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
-                        <%= t(:label_skills) %>
+                      <% if current_page?(projects_path) %>
+                        <%= link_to projects_path, class: "relative block px-3 py-2 transition text-teal-500 dark:text-teal-400" do %>
+                          <%= t(:label_projects) %>
+                          <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>
+                        <% end %>
+                      <% else %>
+                        <%= link_to projects_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
+                          <%= t(:label_projects) %>
+                        <% end %>
                       <% end %>
                     </li>
                     <li>
-                      <%= link_to tools_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
-                        <%= t(:label_tools) %>
+                      <% if current_page?(skills_path) %>
+                        <%= link_to skills_path, class: "relative block px-3 py-2 transition text-teal-500 dark:text-teal-400" do %>
+                          <%= t(:label_skills) %>
+                          <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>
+                        <% end %>
+                      <% else %>
+                        <%= link_to skills_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
+                          <%= t(:label_skills) %>
+                        <% end %>
+                      <% end %>
+                    </li>
+                    <li>
+                      <% if current_page?(tools_path) %>
+                        <%= link_to skills_path, class: "relative block px-3 py-2 transition text-teal-500 dark:text-teal-400" do %>
+                          <%= t(:label_tools) %>
+                          <span class="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-teal-500/0 via-teal-500/40 to-teal-500/0 dark:from-teal-400/0 dark:via-teal-400/40 dark:to-teal-400/0"></span>
+                        <% end %>
+                      <% else %>
+                        <%= link_to tools_path, class: "relative whitespace-nowrap block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400" do %>
+                          <%= t(:label_tools) %>
+                        <% end %>
                       <% end %>
                     </li>
                   </ul>
