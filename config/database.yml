@@ -12,14 +12,14 @@ default: &default
 development:
   <<: *default
   host: localhost
-  username: rail
+  username: rails
   password: 123
   database: grisha_development
 
 test:
   <<: *default
   host: localhost
-  username: rail
+  username: rails
   password: 123
   database: grisha_test
 
