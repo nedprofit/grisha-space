@@ -1,30 +1,20 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem "sqlite3"
-#
 default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: <%= ENV['POSTGRES_USER'] || 'rails' %>
+  password: <%= ENV['POSTGRES_PASSWORD'] || '123' %>
 
 development:
   <<: *default
-  host: localhost
-  username: rails
-  password: 123
-  database: grisha_development
+  database: grisha_space_development
 
 test:
   <<: *default
-  host: localhost
-  username: rails
-  password: 123
-  database: grisha_test
+  database: grisha_space_test
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  database: grisha_space
-  username: grisha_space_user
-  password: <%= ENV['GRISHA_SPACE_DATABASE_PASSWORD'] %>
+  <<: *default
+  host: db
+  database: <%= ENV['POSTGRES_DB'] %>
