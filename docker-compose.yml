@@ -5,7 +5,7 @@ services:
       context: .
       args:
         RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
-    command: ./bin/rails server -b 0.0.0.0 -p 4000
+    command: bash -c "rm -f /rails/tmp/pids/server.pid && ./bin/rails server -b 0.0.0.0 -p 4000"
     volumes:
       - .:/rails
     ports:
