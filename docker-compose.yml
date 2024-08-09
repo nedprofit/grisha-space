@@ -4,7 +4,6 @@ services:
     build:
       context: .
       args:
-        SECRET_KEY_BASE: ${SECRET_KEY_BASE}
         RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
     command: ./bin/rails server -b 0.0.0.0 -p 4000
     volumes:
@@ -16,7 +15,6 @@ services:
     environment:
       RAILS_ENV: production
       DATABASE_URL: postgres://postgres:password@db/grisha_space
-      SECRET_KEY_BASE: ${SECRET_KEY_BASE}
       RAILS_MASTER_KEY: ${RAILS_MASTER_KEY}
   db:
     image: postgres:13
