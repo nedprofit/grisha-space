@@ -43,7 +43,8 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
+RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile \
+    && if [ -d "public/assets" ]; then echo "Assets successfully precompiled"; else echo "Assets precompile failed, see logs:"; cat log/production.log; exit 1; fi
 
 RUN rm -rf node_modules
 # Final stage for app image
