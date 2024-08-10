@@ -18,12 +18,6 @@ FROM base as build
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential curl git libpq-dev libvips pkg-config unzip yarn
 
-# Install application gems
-COPY Gemfile Gemfile.lock ./
-RUN bundle install && \
-    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
-    bundle exec bootsnap precompile --gemfile
-
 # Install JavaScript dependencies
 ARG NODE_VERSION=20.10.0
 ENV PATH=/usr/local/node/bin:$PATH
@@ -31,6 +25,12 @@ RUN curl -sL https://github.com/nodenv/node-build/archive/master.tar.gz | tar xz
     /tmp/node-build-master/bin/node-build "${NODE_VERSION}" /usr/local/node && \
     npm install -g yarn && \
     rm -rf /tmp/node-build-master
+
+# Install application gems
+COPY Gemfile Gemfile.lock ./
+RUN bundle install && \
+    rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
+    bundle exec bootsnap precompile --gemfile
 
 # Install node modules
 COPY package.json yarn.lock ./
@@ -43,10 +43,8 @@ COPY . .
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
-RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile \
-    && if [ -d "public/assets" ]; then echo "Assets successfully precompiled"; else echo "Assets precompile failed, see logs:"; cat log/production.log; exit 1; fi
+RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 
-RUN rm -rf node_modules
 # Final stage for app image
 FROM base
 
