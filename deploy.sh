@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
 git config --global --add safe.directory /sites/grisha-space
 
 # Пересобираем и перезапускаем контейнеры
