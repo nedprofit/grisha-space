@@ -60,7 +60,7 @@ RUN apt-get update -qq && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives \
 
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2
-ENV MALLOC_CONF='dirty_decay_ms:1000,narenas:2,background_thread:true
+ENV MALLOC_CONF='dirty_decay_ms:1000,narenas:2,background_thread:true'
 
 # Entrypoint prepares the database.
 ENTRYPOINT ["./bin/docker-entrypoint"]
