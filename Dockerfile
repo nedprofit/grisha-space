@@ -16,7 +16,7 @@ FROM base as build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential curl git libpq-dev libvips pkg-config unzip yarn libjemalloc2
+    apt-get install --no-install-recommends -y build-essential curl git libpq-dev libvips pkg-config unzip yarn
 
 # Install JavaScript dependencies
 ARG NODE_VERSION=20.10.0
@@ -56,7 +56,7 @@ COPY --from=build /rails/public/assets /rails/app/public/assets
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libvips postgresql-client && \
+    apt-get install --no-install-recommends -y curl libvips postgresql-client libjemalloc2 && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives \
 
 # Entrypoint prepares the database.
