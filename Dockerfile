@@ -16,7 +16,7 @@ FROM base as build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential curl git libpq-dev libvips pkg-config unzip yarn
+    apt-get install --no-install-recommends -y build-essential curl git libpq-dev libvips pkg-config unzip yarn libjemalloc2
 
 # Install JavaScript dependencies
 ARG NODE_VERSION=20.10.0
