@@ -11,15 +11,10 @@ module GrishaSpace
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.hosts << "grisha.space"
-
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
-
-    config.i18n.available_locales = [:en, :ru]
-    config.i18n.default_locale = "ru"
 
     # Configuration for the application, engines, and railties goes here.
     #

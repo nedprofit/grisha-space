@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 41 41" style="enable-background:new 0 0 41 41;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0.8813" y1="41.4419" x2="40.8928" y2="3.0453" gradientTransform="matrix(1 0 0 -1 0 42)">
+	<stop  offset="0" style="stop-color:#2E3FFF"/>
+	<stop  offset="1" style="stop-color:#8A4DFF"/>
+</linearGradient>
+<path class="st0" d="M30.6,0h-10h-8.3c-0.9,0-1.7,0.8-1.7,1.7v6.7C10.6,9.3,9.9,10,9,10H2.3c-0.9,0-1.7,0.8-1.7,1.7V20v10v8.3
+	c0,0.9,0.7,1.7,1.7,1.7H9c0.9,0,1.7-0.8,1.7-1.7v-6.7c0-0.9,0.8-1.7,1.7-1.7h8.3H29c0.9,0,1.7-0.8,1.7-1.7v-6.7
+	c0-0.9,0.8-1.7,1.7-1.7H39c0.9,0,1.7-0.8,1.7-1.7V10V0H30.6z M30.6,18.3c0,0.9-0.8,1.7-1.7,1.7h-8.3h-8.3c-0.9,0-1.7-0.8-1.7-1.7
+	v-6.7c0-0.9,0.8-1.7,1.7-1.7h8.3h10V18.3z"/>
+</svg>
