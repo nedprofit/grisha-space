@@ -1,0 +1,16 @@
+<% if happy_birthday_day? %>
+  <div class="mb-4 flex flex-col items-center justify-center gap-3">
+    <%= image_tag "secrets/happy-birthday.webp" %>
+    <p class="mt-4 text-base text-zinc-600 dark:text-zinc-400">С днем рождения тебя. Даже если ты это не видишь и не читаешь.</p>
+  </div>
+<% else %>
+  <h1 class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+    <%= t(:label_header_description) %>
+  </h1>
+  <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+    <%= t(:label_body_description_1) %>
+  </p>
+  <p class="mt-2 text-base text-zinc-600 dark:text-zinc-400">
+    <%= t(:label_body_description_2) %>
+  </p>
+<% end %>
