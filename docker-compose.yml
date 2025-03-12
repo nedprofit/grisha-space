@@ -4,8 +4,6 @@ services:
     build: .
     command: bash -c "./bin/rails server -b 0.0.0.0 -p 4000"
     restart: unless-stopped
-    volumes:
-      - .:/rails
     ports:
       - "4000:4000"
     depends_on:
