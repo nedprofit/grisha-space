@@ -76,7 +76,8 @@ COPY --from=build /rails /rails
 RUN groupadd --system rails && \
     useradd rails --uid 1000 --gid rails --create-home --shell /bin/bash && \
     chown -R rails:rails /rails && \
-    chmod -R u+rwX /rails
+    chmod -R 755 /rails && \
+    chmod -R 777 /rails/tmp
 
 USER rails:rails
 
