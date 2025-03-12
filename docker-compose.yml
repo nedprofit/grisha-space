@@ -2,7 +2,7 @@ version: '3.8'
 services:
   web:
     build: .
-    command: bash -c "rm -f /rails/tmp/pids/server.pid && ./bin/rails server -b 0.0.0.0 -p 4000"
+    command: bash -c "./bin/rails server -b 0.0.0.0 -p 4000"
     restart: unless-stopped
     volumes:
       - .:/rails
