@@ -76,6 +76,10 @@ COPY --from=build /rails/public/assets /rails/app/public/assets
 RUN groupadd --system --gid 1000 rails && \
     useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
+
+# Добавлено создание директории и настройка прав
+RUN mkdir -p tmp/pids && chmod -R 777 tmp
+
 USER 1000:1000
 
 # Entrypoint prepares the database.
