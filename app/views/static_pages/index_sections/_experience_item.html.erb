@@ -1,0 +1,28 @@
+<li class="flex items-center gap-4 rounded-md p-2 hover:bg-zinc-100">
+  <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full bg-white dark:bg-zinc-800">
+    <% if icon_image.present? %>
+      <%= image_tag icon_image, class: icon_class %>
+    <% elsif icon_svg.present? %>
+      <%= inline_svg icon_svg, class: icon_class %>
+    <% end %>
+  </div>
+  <dl class="flex flex-auto flex-wrap gap-x-2">
+    <dt class="sr-only">Company</dt>
+    <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100"><%= company %></dd>
+
+    <dt class="sr-only">Role</dt>
+    <dd class="text-xs text-zinc-500 dark:text-zinc-400"><%= role %></dd>
+
+    <dt class="sr-only">Date</dt>
+    <dd class="ml-auto text-xs text-zinc-400 dark:text-zinc-500" aria-label="<%= aria_label %>">
+      <time datetime="<%= date_from %>"><%= date_from %></time>
+      <% if date_to.present? %>
+        <span aria-hidden="true">—</span>
+        <time datetime="<%= date_to %>"><%= date_to %></time>
+      <% else %>
+        <span aria-hidden="true">—</span>
+        <time><%= t(:label_current_time) %></time>
+      <% end %>
+    </dd>
+  </dl>
+</li>

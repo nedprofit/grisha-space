@@ -1,0 +1,19 @@
+<form class="rounded-2xl border border-zinc-200 p-6 dark:border-zinc-700/40" action="/thank-you">
+  <h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <%= inline_svg "mail.svg", class: "size-6" %>
+    <span class="ml-3">
+      <%= t(:label_heading_job_offers) %>
+    </span>
+  </h2>
+  <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    <%= t(:label_active_body_job_offers) %>
+  </p>
+  <div class="mt-6 flex">
+    <%= mail_to "nedprofit@gmail.com", class: "inline-flex items-center gap-x-1.5 rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600" do %>
+      <svg class="fill-green-500 h-1.5 w-1.5" viewBox="0 0 6 6" aria-hidden="true">
+        <circle cx="3" cy="3" r="3"/>
+      </svg>
+      nedprofit@gmail.com
+    <% end %>
+  </div>
+</form>

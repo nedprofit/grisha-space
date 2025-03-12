@@ -1,0 +1,78 @@
+<h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+<%= inline_svg "work.svg", class: "size-6" %>
+<span class="ml-3"><%= t(:label_work) %></span>
+</h2>
+
+<ol class="mt-6 space-y-4">
+  <%= render partial: "static_pages/index_sections/experience_item",
+             locals: {
+               icon_image: 'logo/optimalcity.ico',
+               icon_svg: nil,
+               icon_class: 'size-7',
+               company: 'OptimalCity',
+               role: 'Team Lead Ruby Developer',
+               date_from: '2024',
+               date_to: nil,
+               date_to_label: t(:label_current_time),
+               aria_label: '2024 until Present'
+             } %>
+
+  <%= render partial: "static_pages/index_sections/experience_item",
+             locals: {
+               icon_image: nil,
+               icon_svg: 'companies/stsoft.svg',
+               icon_class: 'size-7',
+               company: 'ST Soft',
+               role: 'Team Lead Ruby Developer',
+               date_from: '2023',
+               date_to: '2024',
+               date_to_label: nil,
+               aria_label: '2023 until 2024'
+             } %>
+
+  <%= render partial: "static_pages/index_sections/experience_item",
+             locals: {
+               icon_image: nil,
+               icon_svg: 'companies/stsoft.svg',
+               icon_class: 'size-7',
+               company: 'ST Soft',
+               role: 'Ruby Developer',
+               date_from: '2022',
+               date_to: '2023',
+               date_to_label: nil,
+               aria_label: '2022 until 2023'
+             } %>
+
+  <%= render partial: "static_pages/index_sections/experience_item",
+             locals: {
+               icon_image: nil,
+               icon_svg: 'companies/bmstu.svg',
+               icon_class: 'size-7',
+               company: 'Bauman Moscow State Technical University',
+               role: 'Ruby Developer',
+               date_from: '2018',
+               date_to: '2021',
+               date_to_label: nil,
+               aria_label: '2018 until 2020'
+             } %>
+
+  <%= render partial: "static_pages/index_sections/experience_item",
+             locals: {
+               icon_image: nil,
+               icon_svg: 'companies/upwork.svg',
+               icon_class: 'size-7',
+               company: 'Upwork',
+               role: 'Ruby Developer',
+               date_from: '2017',
+               date_to: '2018',
+               date_to_label: nil,
+               aria_label: '2017'
+             } %>
+</ol>
+
+<%= link_to '/files/cv.pdf', target: '_blank', class: "inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-100 font-medium text-zinc-900 hover:bg-zinc-200 active:bg-zinc-100 active:text-zinc-900/60 dark:bg-zinc-800/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:active:bg-zinc-800/50 dark:active:text-zinc-50/70 group mt-6 w-full" do %>
+  <%= t(:label_download_cv) %>
+  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="h-4 w-4 stroke-zinc-400 group-active:stroke-zinc-600 transition dark:group-active:stroke-zinc-50 dark:group-hover:stroke-zinc-50">
+    <path d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </svg>
+<% end %>
